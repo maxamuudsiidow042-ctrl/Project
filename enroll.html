@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register new students at National School.">
+    <title>National School | Student Registration</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2997/2997300.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>National School</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="classes.html">Classes & Subjects</a></li>
+                <li><a href="schedule.html">Timetable</a></li>
+                <li><a href="enroll.html" class="active">Student Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h2>New Student Registration Form</h2>
+            <p style="margin-bottom: 20px;">Please fill out the form below to enroll a student:</p>
+
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Student Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="student_name">Full Student Name:</label>
+                        <input type="text" id="student_name" name="student_name" placeholder="e.g. Ahmed Ali Farah" required minlength="3">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent_email">Parent Email Address:</label>
+                        <input type="email" id="parent_email" name="parent_email" placeholder="parent@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Account Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required minlength="6">
+                    </div>
+                </fieldset>
+
+                <fieldset style="margin-top: 20px;">
+                    <legend>Grade & Shift Details</legend>
+
+                    <div class="form-group">
+                        <label for="level">Select School Level:</label>
+                        <select id="level" name="level" required>
+                            <option value="">-- Choose Level --</option>
+                            <option value="primary">Primary School (5 Subjects)</option>
+                            <option value="middle">Middle School (8 Subjects)</option>
+                            <option value="high">High School (12 Subjects)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Shift:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="morning" name="shift" value="Morning" required>
+                            <label for="morning">Morning</label>
+
+                            <input type="radio" id="afternoon" name="shift" value="Afternoon">
+                            <label for="afternoon">Afternoon</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address & Additional Notes:</label>
+                        <textarea id="address" name="address" rows="3" placeholder="Enter home address or special notes..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="rules" name="rules" required>
+                        <label for="rules">I agree to the school terms and regulations</label>
+                    </div>
+                </fieldset>
+
+                <br>
+                <button type="submit" class="btn-submit">Register Student</button>
+                <button type="reset" class="btn-reset">Reset Form</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 National School. All rights reserved.</p>
+    </footer>
+</body>
+</html>
